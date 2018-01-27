@@ -111,20 +111,20 @@ Connection ~ 3800 3850
 Connection ~ 4050 2800
 Text Label 3600 2800 0    60   ~ 0
 Vdd
-Text Label 7500 4250 0    60   ~ 0
+Text Label 7350 4250 0    60   ~ 0
 Vdd
 Connection ~ 3800 3200
 Text Label 3600 3200 0    60   ~ 0
 GND
-Text Label 7500 4850 0    60   ~ 0
+Text Label 7350 5150 0    60   ~ 0
 GND
-Text Label 7500 4350 0    60   ~ 0
+Text Label 7350 4350 0    60   ~ 0
 MOSI
-Text Label 7500 4450 0    60   ~ 0
+Text Label 7350 4450 0    60   ~ 0
 MISO
-Text Label 7500 4550 0    60   ~ 0
+Text Label 7350 4550 0    60   ~ 0
 CLK
-Text Label 7500 4650 0    60   ~ 0
+Text Label 7350 4650 0    60   ~ 0
 ~CS
 $Comp
 L GND #PWR02
@@ -139,32 +139,17 @@ F 3 "" H 5100 4000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5100 3850 5100 4000
-$Comp
-L Conn_01x07_Male J1
-U 1 1 59F731AD
-P 8100 4550
-F 0 "J1" H 8100 4950 50  0000 C CNN
-F 1 "EA_DOGS104" H 8100 4150 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x07_Pitch2.54mm" H 8100 4550 50  0001 C CNN
-F 3 "" H 8100 4550 50  0001 C CNN
-	1    8100 4550
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
-	7900 4250 7500 4250
+	7900 4250 7350 4250
 Wire Wire Line
-	7900 4350 7500 4350
+	7900 4350 7350 4350
 Wire Wire Line
-	7900 4450 7500 4450
+	7900 4450 7350 4450
 Wire Wire Line
-	7900 4550 7500 4550
+	7900 4550 7350 4550
 Wire Wire Line
-	7900 4650 7500 4650
-Wire Wire Line
-	7900 4750 7500 4750
-Wire Wire Line
-	7900 4850 7500 4850
-Text Label 7500 4750 0    60   ~ 0
+	7900 4650 7350 4650
+Text Label 7350 4850 0    60   ~ 0
 ~RESET
 Wire Wire Line
 	5700 3850 5700 4000
@@ -213,13 +198,11 @@ Wire Wire Line
 	6050 2900 7050 2900
 Wire Wire Line
 	6050 3000 6650 3000
-Text Label 6100 2350 0    60   ~ 0
-Vdd
 $Comp
-L R R2
+L R R3
 U 1 1 59F7715F
 P 6800 3000
-F 0 "R2" V 6850 3150 50  0000 C CNN
+F 0 "R3" V 6850 3150 50  0000 C CNN
 F 1 "27Ω" V 6800 3000 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 6730 3000 50  0001 C CNN
 F 3 "" H 6800 3000 50  0001 C CNN
@@ -228,10 +211,10 @@ F 4 "Value" H 6800 3000 60  0001 C CNN "Link"
 	0    1    1    0   
 $EndComp
 $Comp
-L R R1
+L R R4
 U 1 1 59F771B5
 P 6500 3100
-F 0 "R1" V 6550 3250 50  0000 C CNN
+F 0 "R4" V 6550 3250 50  0000 C CNN
 F 1 "7Ω" V 6500 3100 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 6430 3100 50  0001 C CNN
 F 3 "" H 6500 3100 50  0001 C CNN
@@ -239,10 +222,10 @@ F 3 "" H 6500 3100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R3
+L R R2
 U 1 1 59F7720F
 P 7200 2900
-F 0 "R3" V 7150 3050 50  0000 C CNN
+F 0 "R2" V 7150 3050 50  0000 C CNN
 F 1 "10Ω" V 7200 2900 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 7130 2900 50  0001 C CNN
 F 3 "" H 7200 2900 50  0001 C CNN
@@ -262,16 +245,14 @@ Connection ~ 7500 3100
 $Comp
 L GND #PWR03
 U 1 1 59F77332
-P 7500 3350
-F 0 "#PWR03" H 7500 3100 50  0001 C CNN
-F 1 "GND" H 7500 3200 50  0000 C CNN
-F 2 "" H 7500 3350 50  0001 C CNN
-F 3 "" H 7500 3350 50  0001 C CNN
-	1    7500 3350
+P 7350 2150
+F 0 "#PWR03" H 7350 1900 50  0001 C CNN
+F 1 "GND" H 7350 2000 50  0000 C CNN
+F 2 "" H 7350 2150 50  0001 C CNN
+F 3 "" H 7350 2150 50  0001 C CNN
+	1    7350 2150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6400 2350 6400 2800
 Wire Wire Line
 	6400 2500 6800 2500
 $Comp
@@ -294,9 +275,80 @@ Wire Wire Line
 Wire Wire Line
 	6750 2800 6750 2900
 Connection ~ 6750 2900
-Wire Wire Line
-	6400 2350 6100 2350
-Connection ~ 6400 2500
 Text Notes 7500 2850 0    60   ~ 0
 No pop when using the \nAmber back light.
+$Comp
+L Conn_01x10_Male J1
+U 1 1 5A6CAE8B
+P 8100 4650
+F 0 "J1" H 8100 5150 50  0000 C CNN
+F 1 "EA_DOGS104" H 8100 4050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x10_Pitch2.54mm" H 8100 4650 50  0001 C CNN
+F 3 "" H 8100 4650 50  0001 C CNN
+F 4 "Value" H 8100 4650 60  0001 C CNN "Link"
+F 5 "Value" H 8100 4650 60  0001 C CNN "Comp_Name"
+	1    8100 4650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 5150 7350 5150
+NoConn ~ 7900 5050
+$Comp
+L Q_NMOS_GSD Q1
+U 1 1 5A6CB19B
+P 6500 1650
+F 0 "Q1" H 6700 1700 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 6700 1600 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 6700 1750 50  0001 C CNN
+F 3 "" H 6500 1650 50  0001 C CNN
+	1    6500 1650
+	-1   0    0    -1  
+$EndComp
+Text Label 7350 4950 0    60   ~ 0
+BACKLIGHT
+Wire Wire Line
+	6400 1850 6400 2800
+Connection ~ 6400 2500
+Wire Wire Line
+	6700 1650 8300 1650
+Wire Wire Line
+	7900 4950 7350 4950
+Text Label 8300 1650 2    60   ~ 0
+BACKLIGHT
+Wire Wire Line
+	6400 1450 6400 1200
+Wire Wire Line
+	6400 1200 6000 1200
+Text Label 6000 1200 0    60   ~ 0
+Vdd
+Wire Wire Line
+	7900 4850 7350 4850
+NoConn ~ 7900 4750
+$Comp
+L R R1
+U 1 1 5A6CB941
+P 7350 1900
+F 0 "R1" V 7250 1900 50  0000 C CNN
+F 1 "10kΩ" V 7350 1900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7280 1900 50  0001 C CNN
+F 3 "" H 7350 1900 50  0001 C CNN
+	1    7350 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 5A6CBAE3
+P 7500 3350
+F 0 "#PWR04" H 7500 3100 50  0001 C CNN
+F 1 "GND" H 7500 3200 50  0000 C CNN
+F 2 "" H 7500 3350 50  0001 C CNN
+F 3 "" H 7500 3350 50  0001 C CNN
+	1    7500 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 2150 7350 2050
+Wire Wire Line
+	7350 1650 7350 1750
+Connection ~ 7350 1650
 $EndSCHEMATC
