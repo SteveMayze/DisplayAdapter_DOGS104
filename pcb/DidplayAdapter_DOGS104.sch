@@ -14,23 +14,23 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Conn_01x07_Male J?
+L Connector:Conn_01x07_Male J1
 U 1 1 5F2F8B52
 P 8100 4550
-F 0 "J?" H 8072 4574 50  0000 R CNN
+F 0 "J1" H 8072 4574 50  0000 R CNN
 F 1 "Conn_01x07_Male" H 8072 4483 50  0000 R CNN
-F 2 "" H 8100 4550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Horizontal" H 8100 4550 50  0001 C CNN
 F 3 "~" H 8100 4550 50  0001 C CNN
 	1    8100 4550
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Jumper:SolderJumper_2_Open JP?
+L Jumper:SolderJumper_2_Open JP1
 U 1 1 5F2F74EA
 P 6950 2500
-F 0 "JP?" H 6950 2613 50  0000 C CNN
+F 0 "JP1" H 6950 2613 50  0000 C CNN
 F 1 "SolderJumper_2_Open" H 6950 2614 50  0001 C CNN
-F 2 "" H 6950 2500 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6950 2500 50  0001 C CNN
 F 3 "~" H 6950 2500 50  0001 C CNN
 	1    6950 2500
 	1    0    0    -1  
@@ -46,13 +46,9 @@ Wire Wire Line
 Wire Wire Line
 	3800 3200 4050 3200
 Wire Wire Line
-	4050 2800 4500 2800
-Wire Wire Line
 	3800 3850 3800 4000
 Wire Wire Line
 	4050 3200 4650 3200
-Wire Wire Line
-	4500 2800 4650 2800
 Text Notes 7500 2850 0    60   ~ 0
 No pop when using the \nAmber back light.
 Connection ~ 6400 2500
@@ -175,7 +171,7 @@ Wire Wire Line
 	5700 4000 6100 4000
 Wire Wire Line
 	5700 3850 5700 4000
-Text Label 7500 4750 0    60   ~ 0
+Text Label 7500 4850 0    60   ~ 0
 ~RESET
 Wire Wire Line
 	7900 4850 7500 4850
@@ -208,11 +204,11 @@ Text Label 7500 4650 0    60   ~ 0
 ~CS
 Text Label 7500 4550 0    60   ~ 0
 CLK
-Text Label 7500 4450 0    60   ~ 0
-MISO
 Text Label 7500 4350 0    60   ~ 0
+MISO
+Text Label 7500 4450 0    60   ~ 0
 MOSI
-Text Label 7500 4850 0    60   ~ 0
+Text Label 7500 4750 0    60   ~ 0
 GND
 Text Label 3600 3200 0    60   ~ 0
 GND
@@ -261,7 +257,6 @@ Wire Wire Line
 	3600 3200 3800 3200
 Wire Wire Line
 	4050 3200 4050 3150
-Connection ~ 4500 2800
 Wire Wire Line
 	4050 2800 4050 2850
 $Comp
@@ -277,9 +272,45 @@ F 4 "Value" H 4050 3000 60  0001 C CNN "Link"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 3000 4650 3000
-Wire Wire Line
-	4500 2800 4500 3000
+	4450 3000 4650 3000
 Wire Wire Line
 	3600 2800 4050 2800
+$Comp
+L Jumper:SolderJumper_3_Open JP2
+U 1 1 5F8E3EEB
+P 2850 2850
+F 0 "JP2" V 2902 2917 50  0000 L CNN
+F 1 "SPI/~IIC" V 2804 2917 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels" H 2850 2850 50  0001 C CNN
+F 3 "~" H 2850 2850 50  0001 C CNN
+	1    2850 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4050 2800 4650 2800
+Text Label 4450 3000 0    50   ~ 0
+MODE
+Wire Wire Line
+	3000 2850 3250 2850
+Text Label 3250 2850 2    50   ~ 0
+MODE
+$Comp
+L power:GND #PWR04
+U 1 1 5F8EB1C8
+P 2850 3200
+F 0 "#PWR04" H 2850 2950 50  0001 C CNN
+F 1 "GND" H 2850 3050 50  0000 C CNN
+F 2 "" H 2850 3200 50  0001 C CNN
+F 3 "" H 2850 3200 50  0001 C CNN
+	1    2850 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3050 2850 3200
+Wire Wire Line
+	2850 2650 2850 2450
+Wire Wire Line
+	2850 2450 2550 2450
+Text Label 2550 2450 0    50   ~ 0
+Vdd
 $EndSCHEMATC
