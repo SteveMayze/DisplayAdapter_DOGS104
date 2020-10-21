@@ -343,5 +343,5 @@ SA0
 Text Notes 2900 4050 0    50   ~ 0
 0x7A
 Text Notes 2900 4750 0    50   ~ 0
-0x3D
+0x78
 $EndSCHEMATC
