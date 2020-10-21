@@ -22,7 +22,7 @@ F 1 "Conn_01x07_Male" H 8072 4483 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Horizontal" H 8100 4550 50  0001 C CNN
 F 3 "~" H 8100 4550 50  0001 C CNN
 	1    8100 4550
-	-1   0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Open JP1
@@ -94,7 +94,7 @@ U 1 1 59F7720F
 P 7200 2900
 F 0 "R3" V 7150 3050 50  0000 C CNN
 F 1 "10Ω" V 7200 2900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7130 2900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7130 2900 50  0001 C CNN
 F 3 "" H 7200 2900 50  0001 C CNN
 	1    7200 2900
 	0    1    1    0   
@@ -105,7 +105,7 @@ U 1 1 59F771B5
 P 6500 3100
 F 0 "R1" V 6550 3250 50  0000 C CNN
 F 1 "7Ω" V 6500 3100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6430 3100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6430 3100 50  0001 C CNN
 F 3 "" H 6500 3100 50  0001 C CNN
 	1    6500 3100
 	0    1    1    0   
@@ -116,7 +116,7 @@ U 1 1 59F7715F
 P 6800 3000
 F 0 "R2" V 6850 3150 50  0000 C CNN
 F 1 "27Ω" V 6800 3000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6730 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6730 3000 50  0001 C CNN
 F 3 "" H 6800 3000 50  0001 C CNN
 F 4 "Value" H 6800 3000 60  0001 C CNN "Link"
 	1    6800 3000
@@ -189,17 +189,6 @@ Wire Wire Line
 	7900 4250 7500 4250
 Wire Wire Line
 	5100 3850 5100 4000
-$Comp
-L power:GND #PWR02
-U 1 1 59F72FDF
-P 5100 4000
-F 0 "#PWR02" H 5100 3750 50  0001 C CNN
-F 1 "GND" H 5100 3850 50  0000 C CNN
-F 2 "" H 5100 4000 50  0001 C CNN
-F 3 "" H 5100 4000 50  0001 C CNN
-	1    5100 4000
-	1    0    0    -1  
-$EndComp
 Text Label 7500 4650 0    60   ~ 0
 ~CS
 Text Label 7500 4550 0    60   ~ 0
@@ -233,7 +222,7 @@ U 1 1 59F72CDF
 P 4300 3650
 F 0 "C2" H 4325 3750 50  0000 L CNN
 F 1 "1μF 16V" H 4325 3550 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 4338 3500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4338 3500 50  0001 C CNN
 F 3 "" H 4300 3650 50  0001 C CNN
 F 4 "Value" H 4300 3650 60  0001 C CNN "Link"
 	1    4300 3650
@@ -265,7 +254,7 @@ U 1 1 59F72C5B
 P 4050 3000
 F 0 "C1" H 4075 3100 50  0000 L CNN
 F 1 "1μF 16V" H 4075 2900 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 4088 2850 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4088 2850 50  0001 C CNN
 F 3 "" H 4050 3000 50  0001 C CNN
 F 4 "Value" H 4050 3000 60  0001 C CNN "Link"
 	1    4050 3000
@@ -276,10 +265,10 @@ Wire Wire Line
 Wire Wire Line
 	3600 2800 4050 2800
 $Comp
-L Jumper:SolderJumper_3_Open JP?
+L Jumper:SolderJumper_3_Open JP2
 U 1 1 5F8E3EEB
 P 2850 2850
-F 0 "JP?" V 2902 2917 50  0000 L CNN
+F 0 "JP2" V 2902 2917 50  0000 L CNN
 F 1 "SPI/~IIC" V 2804 2917 50  0000 L CNN
 F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels" H 2850 2850 50  0001 C CNN
 F 3 "~" H 2850 2850 50  0001 C CNN
@@ -295,10 +284,10 @@ Wire Wire Line
 Text Label 3250 2850 2    50   ~ 0
 MODE
 $Comp
-L power:GND #PWR?
+L power:GND #PWR04
 U 1 1 5F8EB1C8
 P 2850 3200
-F 0 "#PWR?" H 2850 2950 50  0001 C CNN
+F 0 "#PWR04" H 2850 2950 50  0001 C CNN
 F 1 "GND" H 2850 3050 50  0000 C CNN
 F 2 "" H 2850 3200 50  0001 C CNN
 F 3 "" H 2850 3200 50  0001 C CNN
@@ -313,4 +302,46 @@ Wire Wire Line
 	2850 2450 2550 2450
 Text Label 2550 2450 0    50   ~ 0
 Vdd
+$Comp
+L Jumper:SolderJumper_3_Open JP?
+U 1 1 5F901FB3
+P 2850 4400
+F 0 "JP?" V 2902 4467 50  0000 L CNN
+F 1 "SPI/~IIC" V 2804 4467 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels" H 2850 4400 50  0001 C CNN
+F 3 "~" H 2850 4400 50  0001 C CNN
+	1    2850 4400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3000 4400 3250 4400
+$Comp
+L power:GND #PWR?
+U 1 1 5F901FBF
+P 2850 4750
+F 0 "#PWR?" H 2850 4500 50  0001 C CNN
+F 1 "GND" H 2850 4600 50  0000 C CNN
+F 2 "" H 2850 4750 50  0001 C CNN
+F 3 "" H 2850 4750 50  0001 C CNN
+	1    2850 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 4600 2850 4750
+Wire Wire Line
+	2850 4200 2850 4000
+Wire Wire Line
+	2850 4000 2550 4000
+Text Label 2550 4000 0    50   ~ 0
+Vdd
+Wire Wire Line
+	5100 4000 4850 4000
+Text Label 4850 4000 0    50   ~ 0
+SA0
+Text Label 3250 4400 2    50   ~ 0
+SA0
+Text Notes 2900 4050 0    50   ~ 0
+0x7A
+Text Notes 2900 4750 0    50   ~ 0
+0x3D
 $EndSCHEMATC
